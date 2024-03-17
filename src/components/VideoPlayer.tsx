@@ -3,7 +3,7 @@ import borderLeft from "../assets/video_border_left.svg";
 import accentTop from "../assets/video_border_top.svg";
 import accentBottom from "../assets/video_border_bottom.svg";
 import borderRight from "../assets/video_border_right.svg";
-import videoThumbnail from "../assets/thumbnail.png";
+// import videoThumbnail from "../assets/thumbnail.png";
 import { motion } from "framer-motion";
 
 export default function VideoPlayer() {
