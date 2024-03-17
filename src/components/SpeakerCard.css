@@ -1,0 +1,66 @@
+.speaker_card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 237px;
+}
+
+.speaker_card > .img_container {
+  position: relative;
+  width: 237px;
+  height: 242px;
+}
+
+.speaker_card .speaker_image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.speaker_card, .speaker_card .fill_lit, .speaker_card .stroke_lit, .speaker_card .speaker_image, .speaker_card  .card_body {
+  transition: all 0.5s ease-in-out;
+}
+
+.speaker_card:hover  .card_body {
+  transform: translateY(16px);
+}
+
+.speaker_card:hover .speaker_image {
+  transform: translate(-26px, 16px);
+}
+
+.speaker_card:hover .fill_lit {
+  fill: #E57373;
+}
+
+.speaker_card:hover .stroke_lit {
+  stroke: #E57373;
+}
+
+.speaker_card > .card_body {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.speaker_card > .card_body > .nametag >  p {
+  color: #fff;
+  font-family: "Google Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+
+.speaker_card > .card_body > .nametag > small {
+  color: #B2C5CD;
+  font-family: "Google Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

@@ -1,0 +1,134 @@
+#nav {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  background: rgba(14, 19, 27, 0.01);
+  backdrop-filter: blur(2px);
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm);
+}
+
+#nav > .logo_wrapper {
+  width: 100%;
+}
+
+#nav > .nav_links {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 101.2%; /* 12.144px */
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+#nav > .btn_wrapper {
+  padding: var(--spacing-sm);
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.menu {
+  position: fixed;
+  right: 0;
+  z-index: 10;
+  display: flex !important;
+  flex-direction: column;
+  background: #0F141E;
+  z-index: 999;
+  width: 100%;
+  max-width: 300px;
+  min-height: 100vh;
+  animation: openNav 0.2s;
+  padding: var(--spacing-sm);
+  top: 0;
+}
+
+.menu > .close_btn {
+  width: 100%;
+  display: flex !important;
+  justify-content: flex-end;
+}
+
+@keyframes openNav {
+  0% {
+    right: -200px;
+  }
+  100% {
+    right: 0;
+  }
+}
+#nav > .nav_links,
+#nav > .btn_wrapper {
+  display: none;
+}
+
+#nav .nav_links li {
+  position: relative;
+}
+
+#nav .nav_links a {
+  cursor: url("/pointer.png"), auto;
+  transition: color 0.5s ease-in-out;
+}
+
+#nav .nav_links a:hover {
+  color: var(--text-primary);
+}
+
+#nav > .navLinks li {
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+#nav .bg_overlay {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 996;
+}
+
+#nav .overlay_closed {
+  display: none;
+  width: 0%;
+  height: 0%;
+}
+
+.hamburger {
+  width: 32px;
+}
+
+@media screen and (min-width: 900px) {
+  #nav .nav_links {
+    display: flex;
+  }
+
+  #nav .nav_links .menu_btn, #nav .nav_links .close_btn{
+    display: none;
+  }
+
+  #nav .btn_wrapper {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}

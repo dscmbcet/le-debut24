@@ -1,0 +1,60 @@
+.btn {
+    display: block;
+    font-family: 'Orbitron';
+    font-weight: 700;
+    color: #4D4D4D;
+    position: relative;
+    border: none;
+    outline: none;
+    background: #FFF;
+    padding: 10px 20px;
+}
+
+.btn, .btn * {
+    cursor: url("/pointer.png"), auto;
+  }
+
+.btn > .border-l {
+    position: absolute;
+    height: 100%;
+    right: 99%;
+    top: 0;
+}
+
+.btn > .border-r {
+    position: absolute;
+    scale: -1;
+    height: 100%;
+    left: 99%;
+    top: 0;
+
+}
+
+.btn:hover {
+    color: #808080;
+    transition: color 0.5s ease-in-out;
+}
+
+.btn:hover .accent-b {
+    transform: translateX(-20%);
+}
+
+.btn:hover .accent-t {
+    transform: translateX(-70%);
+}
+
+.btn > .accent-b {
+    transition: transform 0.5s ease-in-out;
+    top: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn > .accent-t {
+    transition: transform 0.5s ease-in-out;
+    bottom: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
